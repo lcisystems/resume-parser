@@ -102,7 +102,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     connection_string = os.environ['AZURE_STORAGE_CONNECTION_STRING']
     container_name = 'resumeparser'  # Replace with your actual container name
-    # Expecting the blob name as a query parameter
+    # Expecting the blob name as a query parameters
 
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
     blob_client = blob_service_client.get_blob_client(container=container_name, blob=file_name)
